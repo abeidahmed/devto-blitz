@@ -1,0 +1,38 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+@layer components {
+  .btn {
+    @apply py-2 px-3 rounded-md outline-none font-semibold text-sm transition duration-150 ease-in-out;
+
+    &:focus {
+      @apply ring-4;
+    }
+  }
+
+  .btn-primary {
+    @apply text-white bg-indigo-600;
+
+    &:hover {
+      @apply bg-indigo-700;
+    }
+
+    &:focus {
+      @apply ring-indigo-500 ring-opacity-50;
+    }
+  }
+
+  .btn-invisible {
+    @apply text-indigo-600 bg-white;
+
+    &:hover {
+      @apply bg-gray-100;
+    }
+
+    &:focus {
+      @apply ring-indigo-500 ring-opacity-50;
+    }
+  }
+}
+
+@import "tailwindcss/utilities";
