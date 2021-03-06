@@ -13,7 +13,7 @@ function Header() {
             <Icon icon="menu" aria-label="open sidebar" className="w-6 h-6" />
           </button>
           <Link href="/">
-            <a className="inline-block p-2 py-2.5 rounded bg-black leading-5 text-white font-bold uppercase hover:bg-gray-800">
+            <a className="inline-block text-lg p-2 py-2 rounded bg-black leading-6 text-white font-bold uppercase hover:bg-gray-800">
               Dev
             </a>
           </Link>
