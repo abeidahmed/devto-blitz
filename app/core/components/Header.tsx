@@ -6,7 +6,7 @@ import { Icon } from "app/core/components/Icon"
 import { Toggler } from "app/core/components/Toggler"
 import { Avatar } from "app/core/components/Avatar"
 
-export default function Header() {
+export const Header = () => {
   return (
     <header className="px-4 sm:px-6 lg:px-8 bg-white shadow">
       <div className="h-14 flex items-center justify-between max-w-7xl mx-auto">
