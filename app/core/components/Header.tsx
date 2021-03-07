@@ -6,7 +6,11 @@ import { Icon } from "app/core/components/Icon"
 import { Toggler } from "app/core/components/Toggler"
 import { Avatar } from "app/core/components/Avatar"
 
-export const Header = () => {
+type HeaderProps = {
+  setSidebarActive: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export const Header = ({ setSidebarActive }: HeaderProps) => {
   return (
     <header className="px-4 sm:px-6 lg:px-8 bg-white shadow">
       <div className="h-14 flex items-center justify-between max-w-7xl mx-auto">
@@ -14,6 +18,7 @@ export const Header = () => {
           <button
             type="button"
             className="mr-2 text-gray-600 focus:outline-none focus:bg-gray-100 hover:text-gray-500 p-2 rounded-md -ml-2 md:hidden"
+            onClick={() => setSidebarActive(true)}
           >
             <Icon icon="menu" aria-label="open sidebar" className="w-6 h-6" />
           </button>

@@ -1,16 +1,22 @@
 import { Link } from "blitz"
 import { Icon } from "app/core/components/Icon"
 
-export const Sidebar = () => {
+type SidebarProps = {
+  sidebarActive: boolean
+  setSidebarActive: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export const Sidebar = ({ sidebarActive, setSidebarActive }: SidebarProps) => {
   return (
-    <div>
-      <div className="bg-black absolute inset-0 opacity-50" />
-      <aside className="fixed h-screen w-72 top-0 left-0 bg-white">
+    <div className="md:hidden">
+      <div className={`${!sidebarActive && "hidden"} bg-black absolute inset-0 opacity-50`} />
+      <aside className={`${!sidebarActive && "hidden"} fixed h-screen w-72 top-0 left-0 bg-white`}>
         <div className="h-14 flex items-center justify-between px-4 shadow">
           <h1 className="font-bold text-lg">DEV Community</h1>
           <button
             type="button"
             className="text-gray-600 focus:outline-none focus:bg-gray-100 hover:text-gray-500 p-2 rounded-md -mr-2"
+            onClick={() => setSidebarActive(false)}
           >
             <Icon icon="x" className="w-6 h-6" />
           </button>
