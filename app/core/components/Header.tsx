@@ -62,21 +62,23 @@ const UserDropdown = ({ name }: { name: string | null }) => {
     <Toggler>
       {(isActive, setIsActive) => (
         <div className="relative">
-          <button
-            type="button"
-            onClick={() => setIsActive(!isActive)}
-            className="rounded-full focus:outline-none focus:ring-4 focus:ring-indigo-100"
-          >
-            <img
-              className="w-8 h-8 rounded-full"
-              src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-              alt=""
-            />
-          </button>
+          <div className="flex items-center justify-center">
+            <button
+              type="button"
+              onClick={() => setIsActive(!isActive)}
+              className="rounded-full focus:outline-none focus:ring-4 focus:ring-indigo-100"
+            >
+              <img
+                className="w-8 h-8 rounded-full"
+                src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt=""
+              />
+            </button>
+          </div>
           <div
             className={`${
               isActive ? "block" : "hidden"
-            } mt-2 absolute right-0 w-64 origin-top-right text-base bg-white shadow-offset-black border-black border-2 rounded`}
+            } mt-3 absolute right-0 w-64 origin-top-right text-base bg-white shadow-offset-black border-black border-2 rounded`}
           >
             <ul className="py-1">
               <li className="px-1">
