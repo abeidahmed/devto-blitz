@@ -4,6 +4,7 @@ import { useCurrentUser } from "app/core/hooks/useCurrentUser"
 import logout from "app/auth/mutations/logout"
 import { Icon } from "app/core/components/Icon"
 import { Toggler } from "app/core/components/Toggler"
+import { Avatar } from "app/core/components/Avatar"
 
 export default function Header() {
   return (
@@ -68,11 +69,7 @@ const UserDropdown = ({ name }: { name: string | null }) => {
               onClick={() => setIsActive(!isActive)}
               className="rounded-full focus:outline-none focus:ring-4 focus:ring-indigo-100"
             >
-              <img
-                className="w-8 h-8 rounded-full"
-                src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                alt=""
-              />
+              <Avatar userName="Abeid Ahmed" />
             </button>
           </div>
           <div

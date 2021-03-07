@@ -7,7 +7,7 @@ type Props = {
   ) => JSX.Element | null
 }
 
-export const Toggler: React.FC<Props> = ({ children }) => {
+export const Toggler = ({ children }: Props) => {
   const [isActive, setIsActive] = useState<boolean>(false)
 
   return children(isActive, setIsActive)
