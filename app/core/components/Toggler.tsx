@@ -1,4 +1,5 @@
 import { useState } from "react"
+import OutsideClickHandler from "react-outside-click-handler"
 
 type Props = {
   children: (
@@ -10,5 +11,9 @@ type Props = {
 export const Toggler = ({ children }: Props) => {
   const [isActive, setIsActive] = useState<boolean>(false)
 
-  return children(isActive, setIsActive)
+  return (
+    <OutsideClickHandler onOutsideClick={() => setIsActive(false)}>
+      {children(isActive, setIsActive)}
+    </OutsideClickHandler>
+  )
 }
