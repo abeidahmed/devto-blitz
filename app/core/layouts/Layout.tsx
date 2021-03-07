@@ -1,6 +1,7 @@
 import { ReactNode } from "react"
 import { Head } from "blitz"
-import Header from "app/core/components/Header"
+import { Header } from "app/core/components/Header"
+import { Sidebar } from "app/core/components/Sidebar"
 
 type LayoutProps = {
   title?: string
@@ -16,6 +17,7 @@ const Layout = ({ title, children }: LayoutProps) => {
       </Head>
 
       <Header />
+      <Sidebar />
       {children}
     </>
   )
