@@ -7,6 +7,7 @@ module.exports = {
       boxShadow: {
         "offset-black": "4px 4px 0 #000",
       },
+      textColor: ["group-hover"],
     },
   },
   variants: {
